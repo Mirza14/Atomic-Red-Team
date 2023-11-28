@@ -1,0 +1,16 @@
+Atomics refers to different testing techniques based on the MITRE ATT&CK Framework. Each works as a standalone testing mock-up that Security Analysts can use to emulate a specific Technique, such as OS Credential Dumping: LSASS Memory, for a quick example.
+
+Each Atomic typically contain two files, both of which are named by their MITRE ATT&CK Technique ID:
+
+user@ATOMIC$ ls -lh T1003.001/
+-rw-r--r--   1 user  user       300B Jan 4 22:57 T1003.001.md
+-rw-r--r--   1 user  user       500B Jan 4 22:58 T1003.001.yaml
+
+> Markdown File (.md) - Contains all the information about the technique, the supported platform, Executor, GUID, and commands to be executed.
+> YAML File (.yaml) - Configuration used by frameworks, such as Invoke-Atomic and Atomic-Operator, to do the exact emulation of the technique
+
+The Markdown file is written to be self-explanatory, so let's dive deep into the configuration files used to emulate commands.
+
+There are 12 atomic tests for T1003.001, but we will present only one test below for shortness.
+
+
